@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    font-family: algerian;
+    font-size: 40px;
+    margin: 10px;
+}
+body{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 460px; 
+    color: #5199e4;
+}
+.menu-bar{
+    background: #5199e4;
+    text-align: left;
+    margin: 10px;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style:none;
+    color: white;
+}
+.menu-bar ul li{
+    width:160px;
+    margin: 1px;
+    padding: 15px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 17px;
+}
+.menu-bar ul li a #right{
+    text-decoration: none;
+    color:white;
+    font-size: 17px;
+    right: -550px;
+    position: relative;
+}
+.menu-bar ul li:hover{
+    background: linear-gradient(to right, #5199e4, white);
+    border-radius: 3px;
+}
+#profile{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    right: -800px;
+    top: 17px;
+    position:relative;
+    width:160px;
+    margin: 1px;
+    padding: 15px;
+}
+#profile:hover{
+    background: linear-gradient(to right, #5199e4, white);
+    border-radius: 3px;
+}
+#login {
+    text-decoration: none;
+    color:white;
+    font-size: 17px;
+    right: -810px;
+    top: 17px;
+    position: relative;
+    width:160px;
+    margin: 1px;
+    padding: 15px;
+}
+#login:hover{
+    background: linear-gradient(to right, #5199e4, white);
+    border-radius: 3px;
+}
+#logout {
+    text-decoration: none;
+    color:white;
+    font-size: 17px;
+    right: -820px;
+    top: 17px;
+    position: relative;
+    width:160px;
+    margin: 1px;
+    padding: 15px;
+}
+#logout:hover{
+    background: linear-gradient(to right, #5199e4, white);
+    border-radius: 3px;
+}
+.menu-bar .fa{
+    margin-right: 8px;
+}
+.menu-bar .fa-solid{
+    margin-right:8px;
+}
+.sub-menu-1{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: #5199e4;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted white;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color:black;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 20px;
+    margin-top: 40px;
+}

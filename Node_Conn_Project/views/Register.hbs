@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Css/style2.css">
+</head>
+
+<body>
+    <div class="div"> 
+        <form action="/Auth/register" class="signup" name="form" onsubmit="return validated()" method="post">
+            <center><b>SIGN UP</b></center>
+            {{#if msg}}
+            <p class="{{msg_type}}">{{msg}}</p>
+            {{/if}}
+            <h4>Name</h4>
+            <input autocomplete="off" type="text" name="Name" placeholder="Enter Your Name" />
+            <div id="name_error">Please enter your Name</div>
+
+            <h4>Email</h4>
+            <input autocomplete="off" type="email" name="Email" placeholder="Enter your Email Address" />
+            <div id="email_error">Please enter your email address</div>
+
+            <h4>Password</h4>
+            <input autocomplete="off" type="password" name="Password" placeholder="Enter your password" />
+            <div id="ph_error">Phone number must contain 10 digit number</div>
+
+            <h4>Confirm Password</h4>
+            <input type="password" name="ConfirmPassword" placeholder="Re-enter your password">
+            <div id="pass_error">Please create a password</div>.
+
+            <br><br><br>
+
+            <button type="submit" class="submitbutton">Create an Account</button>
+            <p class="login">Already have an account?&nbsp;<a href="/">Login</a></p>
+            <br>
+        </form>
+
+
+    </div>
+
+    <script>
+        var Name = document.forms['form']['Name'];
+        var email = document.forms['form']['email'];
+        var phone = document.forms['form']['phone'];
+        var pass = document.forms['form']['pass'];
+
+        var name_error = document.getElementById('name_error');
+        var email_error = document.getElementById('email_error');
+        var ph_error = document.getElementById('ph_error');
+        var pass_error = document.getElementById('pass_error');
+
+        Name.addEventListener('textInput', Name_Verify);
+        email.addEventListener('textInput', email_Verify);
+        phone.addEventListener('textInput', ph_Verify);
+        pass.addEventListener('textInput', pass_Verify);
+
+        function validated() {
+            if (Name.value.length < 2) {
+                name_error.style.display = "block";
+                Name.focus();
+                return false;
+            }
+            if (email.value.length < 9) {
+                email_error.style.display = "block";
+                email.focus();
+                return false;
+            }
+            if (phone.value.length !=10) {
+                ph_error.style.display = "block";
+                phone.focus();
+                return false;
+            }
+            if (pass.value.length < 6) {
+                pass_error.style.display = "block";
+                pass.focus();
+                return false;
+            }
+        }
+
+
+        function Name_Verify() {
+            if (Name.value.length >= 1) {
+                name_error.style.display = "none";
+            }
+        }
+        function email_Verify() {
+            if (email.value.length >= 8) {
+                email_error.style.display = "none";
+            }
+        }
+        function ph_Verify() {
+            if (phone.value.length == 9) {
+                ph_error.style.display = "none";
+            }
+        }
+        function pass_Verify() {
+            if (pass.value.length >= 5) {
+                pass_error.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
